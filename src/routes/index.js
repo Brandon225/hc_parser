@@ -14,7 +14,7 @@ router.get("/", (req, res, next) => {
 // /api/recieve-xml
 // Post form data
 router.post('/receive-xml', (req, res, next) => {
-    console.log(`recieve-xml req.body? ${req.body}`);
+    console.log(`receive-xml req.body? ${req.body}`);
     res.json('Recieve xml!');
     next();
 });
