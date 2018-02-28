@@ -3,13 +3,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const xmlParser = require('express-xml-bodyparser');
-const logger = require('morgan');
+// const logger = require('morgan');
 const routes = require('./routes');
 
 const app = express();
 
 // parse incoming requests
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(xmlParser());
