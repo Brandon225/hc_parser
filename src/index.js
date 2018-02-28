@@ -13,7 +13,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(xmlParser());
-app.use('/api', routes);
 
 // Allow API to be used by browser
 app.use((req, res, next) => {
@@ -25,6 +24,8 @@ app.use((req, res, next) => {
     }
     next();
 });
+
+app.use('/api', routes);
 
 // // catch 404 and forward to error handler
 app.use(function (req, res, next) {
